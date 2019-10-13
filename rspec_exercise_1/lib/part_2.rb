@@ -22,7 +22,7 @@ def vowel_counts (string)
 end
 
 def caesar_cipher (msg, num)
-    alp="abcdefghijklmnopqrstuvwxyz"
+    alp=("a".."z").to_a
     new=msg.each_char.with_index do |alpha,i|
         if alp.include?(alpha)
             j=alp.index(alpha)
