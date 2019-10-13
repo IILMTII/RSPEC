@@ -26,7 +26,9 @@ def caesar_cipher (msg, num)
     new=msg.each_char.with_index do |alpha,i|
         if alp.include?(alpha)
             j=alp.index(alpha)
-         msg[i]=alp[(j+num)%26]
+            msg[i]=alp[(j+num)%26]
+        else
+            msg[i]=alpha
         end
     end
     return new
